@@ -38,19 +38,6 @@
             &__combo {
                 width: calc(50% - 12px);
 
-                button {
-                    color: variaveis.$corTextoSecundario;
-                    display: block;
-                    width: 100%;
-                    height: 60px;
-                    background-color: #6421ff;
-                    border: none;
-                    border-radius: 4px;
-                    font-size: 18px;
-                    text-transform: uppercase;
-                    cursor: pointer;
-                }
-
                 img {
                     max-height: 60px;
                 }
