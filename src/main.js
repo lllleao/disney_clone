@@ -1,7 +1,30 @@
 document.addEventListener('DOMContentLoaded', function () {
     const buttons = document.querySelectorAll('[data-tab-button]')
+    const faqwQuestion = document.getElementsByClassName('faq__questions__item__question')
+    const sectionHero = document.querySelector('.hero')
+    const header = document.querySelector('header')
+
+    window.addEventListener('scroll', function() {
+        const positionScroll = window.scrollY
+        const positionMenu = sectionHero.clientHeight
+
+        if (positionScroll <= positionMenu) {
+            header.classList.add('header--is-hidden')
+        } else {
+            header.classList.remove('header--is-hidden')
+        }
+    })
+
+    //Seção faq
+    for (let i = 0; i < faqwQuestion.length; i++) {
+        faqwQuestion[i].addEventListener('click', function abrirOuFechar(elemento) {
+            const elementoPai = elemento.target.parentNode
+            elementoPai.classList.toggle('faq__questions__item--is-open')
+        })
+    }
     
 
+    //Seção de atrações, programação das abas
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', function (botao) {
             const abaAlvo = botao.target.dataset.tabButton

@@ -8,6 +8,12 @@
         display: flex;
         justify-content: center;
 
+        @media (max-width: 768px) {
+            white-space: nowrap;
+            padding-left: 28px;
+            overflow-x: scroll;
+        }
+
         &__button {
             color: variaveis.$corTextoSecundario;
             font-size: 20px;
@@ -18,6 +24,10 @@
             text-transform: uppercase;
             cursor: pointer;
             border-bottom: 5px solid transparent;
+
+            @media (max-width: 768px) {
+                font-size: 16px;
+            }
 
             &--is-active {
             border-color: 
@@ -31,6 +41,10 @@
         display: none;
         grid-template-columns: repeat(3, 1fr);
         gap: 24px;
+
+        @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+        }
 
         &--is-active {
             display: grid;

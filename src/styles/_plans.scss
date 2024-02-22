@@ -1,6 +1,11 @@
 .plans {
     padding: 5.6vw;
 
+    .button {
+        margin-top: 2vw;
+        margin-bottom: 8px;
+    }
+
     h2 {
         text-align: center;
     }
@@ -14,11 +19,28 @@
         justify-content: space-around;
         margin-top: 50px;
 
+        @media (max-width: 768px) {
+            display: block;
+
+            &__item{
+                img {
+                    width: 100%;
+                    height: 90px;
+
+                }
+            }
+        }
+
+        .button {
+            margin-top: 24px;
+        }
+
         &__item {
             text-align: center;
             padding: 60px 44px 44px;
             max-width: 380px;
             width: 100%;
+
 
             img {
                 height: 83px;
